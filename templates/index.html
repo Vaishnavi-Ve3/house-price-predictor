@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🏠 House Price Predictor</h2>
+        <form action="/predict" method="POST">
+        <input type="number" name="bedrooms" placeholder="Number of Bedrooms" required
+        value="{{ form_data.get('bedrooms', '') }}">
+        <input type="number" name="bathrooms" placeholder="Number of Bathrooms" step="0.1" required
+        value="{{ form_data.get('bathrooms', '') }}">
+        <input type="number" name="living_area" placeholder="Living Area (sq ft)" required
+        value="{{ form_data.get('living_area', '') }}">
+        <input type="number" name="lot_area" placeholder="Lot Area (sq ft)" required
+        value="{{ form_data.get('lot_area', '') }}">
+        <input type="number" name="floors" placeholder="Number of Floors" step="0.1" required
+        value="{{ form_data.get('floors', '') }}">
+        <input type="number" name="waterfront" placeholder="Waterfront (1=yes, 0=no)" required
+        value="{{ form_data.get('waterfront', '') }}">
+        <input type="number" name="views" placeholder="Number of Views" required
+        value="{{ form_data.get('views', '') }}">
+        <input type="number" name="condition" placeholder="Condition (1 to 5)" required
+        value="{{ form_data.get('condition', '') }}">
+        <button type="submit">Predict Price</button>
+        </form>
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
