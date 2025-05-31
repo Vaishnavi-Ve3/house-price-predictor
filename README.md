@@ -1,6 +1,6 @@
 # House Price Predictor 🏡
+House Price Predictor is a machine learning-based web application built using Flask that predicts house prices based on various input features like location, area, number of bedrooms, bathrooms, and more. It provides a simple and attractive user interface for users to input property details and get real-time price predictions.git init
 
-A Flask web app that predicts house prices based on various features using a linear regression model.
 
 ## Features
 - Input: bedrooms, bathrooms, area, lot size, etc.
@@ -9,7 +9,7 @@ A Flask web app that predicts house prices based on various features using a lin
 
 ## Setup
 ```bash
-git clone https://github.com/yourusername/house-price-predictor.git
+git clone https://github.com/vaishnavi80800/house-price-predictor.git
 cd house-price-predictor
 python -m venv venv
 source venv/bin/activate
